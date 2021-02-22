@@ -87,9 +87,30 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* testing styles */
+.content-wrapper,
+header {
+  border: 1px black solid;
+}
+
+figure {
+  width: 5%;
+  margin: 0;
+}
+
 /********** Global styles ***********/
 
 html{}
+
+.content-wrapper {
+  display: flex;
+  flex-flow: column;
+  padding: 5%;
+}
+
+img {
+  width: 100%;
+}
 
 /*********** Text styles  ***********/
 
@@ -101,9 +122,50 @@ p{}
 /*********** Mobile styles  ***********/
 
 /*** header styles  ***/
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header figure {
+  margin: 0 2%;
+
+}
+
+
+
+
 /*** card class styles  ***/
 
+/* card image styles  */
 
+.recipe-image {
+  width: 75%;
+  margin: auto;
+}
+
+
+/* card content styles  */
+
+.time {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.prep,
+.cook,
+.total {
+  display: flex;
+  align-items: baseline;
+}
+
+.recipe figure {
+  width: 10%;
+  margin: 1% 3%;
+}
 
 
 
@@ -208,10 +270,26 @@ p{}
 }
 @media only screen and (min-width: 1200px) {
 /********** Global styles ***********/
+
+.content-wrapper {
+  flex-flow: row nowrap;
+}
 /*********** Text styles  ***********/
 /*********** Mobile styles  ***********/
 /*** header styles  ***/
 /*** card class styles  ***/
+
+.recipe .columns {
+  display: flex;
+}
+
+.columns .ingredients {
+  width: 50%;
+}
+
+.columns .directions {
+  width: 50%;
+}
 }
 /* ==========================================================================
    Print styles.
