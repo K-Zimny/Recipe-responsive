@@ -88,7 +88,7 @@ textarea {
    ========================================================================== */
 
 /* testing styles */
-.content-wrapper,
+/* .content-wrapper,
 header {
   border: 1px black solid;
 }
@@ -96,16 +96,28 @@ header {
 figure {
   width: 5%;
   margin: 0;
-}
+} */
 
 /********** Global styles ***********/
 
-html{}
+html{
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body {
+  background: #DAF7F6;
+  max-width: 1200px;
+  margin: auto;
+}
+
 
 .content-wrapper {
   display: flex;
   flex-flow: column;
+  margin: 5%;
   padding: 5%;
+  background: white;
 }
 
 img {
@@ -114,41 +126,101 @@ img {
 
 /*********** Text styles  ***********/
 
-h1{}
-h2{}
-h3{}
-p{}
+h1{
+  font-size: 2em;
+}
+h2{
+  font-size: 1.6em;
+}
+h3{
+  font-size: 1.15em;
+}
+p{
+  font-size: 1em;
+}
+li {
+  font-size: .875em;
+}
 
 /*********** Mobile styles  ***********/
 
 /*** header styles  ***/
 
-header {
+header .content-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  background: white;
+  padding: 1% 5%;
 }
 
 header figure {
   margin: 0 2%;
-
+  width: 5%;
 }
-
-
-
 
 /*** card class styles  ***/
 
-/* card image styles  */
+/* recipe image styles  */
 
 .recipe-image {
-  width: 75%;
+  width: 100%;
   margin: auto;
+  /* border: 1px solid black; */
+}
+
+#cookies .recipe-image {
+  background: url("../img/gluten-free-sugar-cookies.jpg");
+  height: 500px;
+  margin: 0;
+  background-size: cover;
+}
+
+#pesto .recipe-image {
+  background: url("../img/nut-free-pesto.jpg");
+  height: 500px;
+  margin: 0;
+  background-size: cover;
+}
+
+#salad .recipe-image {
+  background: url("../img/watermelon-salad.jpg");
+  height: 500px;
+  margin: 0;
+  background-size: cover;
 }
 
 
-/* card content styles  */
+.recipe figure {
+  width: 10%;
+  margin: 1% 3%;
+}
+
+/* recipe content styles  */
+
+.recipe h2 {
+  color: #F16059;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.recipe h3 {
+  color: #F16059;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #3B3B3B;
+  font-family: "Montserrat";
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.recipe ul,
+.recipe ol {
+  line-height: 1.6em;
+}
 
 .time {
   display: flex;
@@ -162,10 +234,6 @@ header figure {
   align-items: baseline;
 }
 
-.recipe figure {
-  width: 10%;
-  margin: 1% 3%;
-}
 
 
 
@@ -267,29 +335,84 @@ header figure {
 /*********** Mobile styles  ***********/
 /*** header styles  ***/
 /*** card class styles  ***/
+  #cookies .recipe-image {
+    height: 700px;
+  }
+
+  #pesto .recipe-image {
+    height: 600px;
+  }
+
+  #salad .recipe-image {
+    height: 700px;
+  }
+
 }
 @media only screen and (min-width: 1200px) {
-/********** Global styles ***********/
+  /********** Global styles ***********/
 
-.content-wrapper {
-  flex-flow: row nowrap;
-}
-/*********** Text styles  ***********/
-/*********** Mobile styles  ***********/
-/*** header styles  ***/
-/*** card class styles  ***/
 
-.recipe .columns {
-  display: flex;
-}
+  .content-wrapper {
+    flex-flow: row nowrap;
+  }
 
-.columns .ingredients {
-  width: 50%;
-}
+  /*********** Text styles  ***********/
+  /*********** Mobile styles  ***********/
+  /*** header styles  ***/
+  /*** card class styles  ***/
 
-.columns .directions {
-  width: 50%;
-}
+  /* recipe image styles  */
+
+  .recipe-image {
+    width: 45%;
+  }
+  .recipe-image img {
+    /* display: none; */
+  }
+
+  #cookies .recipe-image {
+    height: 800px;
+  }
+
+
+
+
+  /* recipe content styles  */
+
+  .recipe {
+    width: 45%;
+    padding: 0 5%;
+  }
+
+  .recipe .time {
+    flex-flow: row;
+    justify-content: space-evenly;
+    border: 1px black solid;
+  }
+
+  .recipe .prep,
+  .recipe .cook {
+    border-right: 1px black solid;
+  }
+  .recipe .prep,
+  .recipe .cook,
+  .recipe .total {
+  box-sizing: border-box;
+  padding: 0 2%;
+  }
+
+  .recipe .columns {
+    display: flex;
+  }
+
+  .columns .ingredients {
+    width: 50%;
+  }
+
+  .columns .directions {
+    width: 50%;
+  }
+
 }
 /* ==========================================================================
    Print styles.
