@@ -157,7 +157,7 @@ header .content-wrapper {
 
 header figure {
   margin: 0 2%;
-  width: 5%;
+  width: 10%;
 }
 
 /*** card class styles  ***/
@@ -334,6 +334,11 @@ header figure {
 /*********** Text styles  ***********/
 /*********** Mobile styles  ***********/
 /*** header styles  ***/
+
+header figure {
+  width: 5%;
+}
+
 /*** card class styles  ***/
   #cookies .recipe-image {
     height: 700px;
